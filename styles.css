@@ -1,0 +1,570 @@
+/* fonts */
+@font-face {
+    font-family: Satoshi;
+    src: url('/assets/fonts/Satoshi-Regular.ttf');
+    font-display: auto;
+}
+@font-face {
+    font-family: Extenda;
+    src: url('/assets/fonts/Extenda-40-Hecto-trial.ttf');
+}
+
+:root {
+    --bg-clr-1: #181818;
+    --bg-clr-2: #272727;
+    --accent-1: #FFFFFF;
+    --accent-2: #000000;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    user-select: none !important;
+    -moz-user-select: none !important;
+    -webkit-user-select: none !important;
+}
+
+body {
+    background-color: var(--bg-clr-1);
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-self: flex-start;
+    gap: 8vmax;
+}
+
+
+/* nav */
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    background-color: var(--accent-1);
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 10px;
+    z-index: 3;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+#nav .logo {
+    width: 16vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+#nav .logo img {
+    width: 100%;
+    object-fit: contain;
+}
+
+#nav .buy-btn {
+    background: var(--accent-2);
+    border-radius: 50px;
+    color: var(--accent-1);
+    padding: .5rem 2rem;
+    font-family: Satoshi;
+    font-weight: 700;
+    align-self: stretch;
+    font-size: 1.5vmax;
+    border: none;
+}
+#nav .tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+#nav .tabs .nav-link {
+    font-size: 1.5vmax;
+    font-family: Satoshi;
+    font-weight: 700;
+    color: var(--accent-2);
+}
+
+#primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+#primary .background {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+#primary .background img {
+    width: 100%;
+    object-fit: contain;
+}
+
+#primary .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+}
+#primary .content .heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#primary .content .heading img {
+    z-index: 2;
+    width: 100%;
+    object-fit: contain;
+}
+#primary .content .heading .heading-top-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+#primary .content .heading .heading-bottom-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+#primary .content .heading .heading-text {
+    font-family: Extenda;
+    color: var(--accent-1);
+    letter-spacing: 1rem;
+    font-weight: 500;
+    font-size: 40vmax;
+    margin: 0;
+    z-index: 2;
+    margin-top: -14vmax;
+}
+
+#primary .button-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: -8vmax;
+}
+#primary .button-bar .buy-btn {
+    font-size: 5vmax;
+    font-weight: 700;
+    font-family: Satoshi;
+    border-radius: 100px;
+    background: var(--accent-1);
+    color: var(--accent-2);
+    border: 2px solid var(--accent-1);
+    padding: .7rem 3rem;
+}
+#primary .button-bar .join-btn {
+    font-size: 5vmax;
+    font-weight: 700;
+    font-family: Satoshi;
+    border-radius: 100px;
+    background: none;
+    color: var(--accent-1);
+    border: 2px solid var(--accent-1);
+    padding: .7rem 3rem;
+}
+
+#primary #wallet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+#primary #wallet .wallet-heading {
+    font-family: Satoshi;
+    font-weight: 700;
+    font-size: 4.2vmax;
+    color: var(--accent-1);
+}
+#primary #wallet .wallet-container {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    background-color: var(--accent-1);
+    padding: 8px 10px;
+    font-family: Satoshi;
+}
+#primary #wallet .wallet-container .wallet-address {
+    display: flex;
+    gap: .8rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+#primary #wallet .wallet-container .wallet-address .wallet-label {
+    background-color: var(--accent-2);
+    border-radius: 1ex;
+    color: var(--accent-1);
+    padding: .6vmax;
+    font-size: 1.2vmax;
+}
+#primary #wallet .wallet-container .wallet-address .wallet-text {
+    font-weight: 600;
+    font-size: 1.2vmax;
+}
+#primary #wallet .wallet-container .copy-btn {
+    background: var(--accent-2);
+    color: var(--accent-1);
+    padding: .8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1.2vmax;
+}
+
+.section-heading {
+    color: var(--accent-1);
+    font-family: Extenda;
+    font-weight: 500;
+    font-size: 8vmax;
+    text-align: center;
+    margin: 0;
+}
+
+#about {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#about .about-content {
+    font-family: Satoshi;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent-1);
+    font-size: 2.5vmax;
+}
+#about .buy-btn {
+    background: var(--accent-1);
+    border-radius: 50px;
+    color: var(--accent-2);
+    padding: 1rem 3rem;
+    font-family: Satoshi;
+    font-weight: 700;
+    align-self: stretch;
+    font-size: 1.8vmax;
+    width: fit-content;
+    margin-top: 1rem;
+    box-shadow: 0px 9px 19px 0px #FFFFFF1A,
+                0px 34px 34px 0px #FFFFFF17,
+                0px 77px 46px 0px #FFFFFF0D,
+                0px 136px 55px 0px #FFFFFF03,
+                0px 213px 60px 0px #FFFFFF00;
+}
+
+#tokenomics {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+#tokenomics .stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vmax;
+}
+#tokenomics .stat-box {
+    background-color: var(--bg-clr-2);
+    border: 2px solid #7B7B7B;
+    padding: 16px;
+    border-radius: 2vmax;
+    font-family: Satoshi;
+    color: var(--accent-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    width: 18vmax;
+}
+#tokenomics .stat-box .stat-label {
+    font-size: 2.5vmax;
+}
+#tokenomics .stat-box .stat-value {
+    font-size: 8vmax;
+    font-weight: 900;
+    line-height: 1;
+}
+
+#chatbot {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#chatbot .chatbot-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(118.15deg, #EEEEFD 0%, #F4E2E5 100%);
+    padding: 3rem;
+    font-family: Satoshi;
+    border-radius: 40px;
+}
+#chatbot .chatbot-container .chatbot-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+#chatbot .chatbot-container .chatbot-heading .chatbot-subtitle {
+    font-size: 3.5vmax;
+    font-weight: 700;
+    color: #A69A9E;
+    line-height: 1;
+}
+#chatbot .chatbot-container .chatbot-heading .chatbot-title {
+    font-size: 3.5vmax;
+    font-weight: 700;
+    color: #574D52;
+    line-height: 1;
+}
+#chatbot .chatbot-container .chatbot-heading .chatbot-note {
+    font-size: 1.3vmax;
+    color: #776E73;
+    line-height: 1;
+    width: 60%;
+    margin-top: .5rem;
+}
+#chatbot .chatbot-container .chatbot-window {
+    width: 80%; 
+    display: flex;
+    flex-direction: column;
+    margin-block: 1.5rem 3rem;
+}
+#chatbot .chatbot-container .chatbot-window .chatbot-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .2rem;
+}
+#chatbot .chatbot-container .chatbot-window .chatbot-text .chat-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+#chatbot .chatbot-container .chatbot-window .chatbot-text .chat-header .chat-icon {
+    width: 2.5vmax;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 100%;
+}
+#chatbot .chatbot-container .chatbot-window .chatbot-text .chat-header .chat-icon img {
+    width: 100%;
+    object-fit: cover;
+}
+#chatbot .chatbot-container .chatbot-window .chatbot-text .chat-header .chat-author {
+    font-size: 1.1vmax;
+    font-weight: 700;
+    color: #574D52;
+}
+#chatbot .chatbot-container .chatbot-window .chatbot-text .chat-content {
+    font-size: 1.1vmax;
+    font-weight: 700;
+    color: #574D52;
+    background: #FCF8F9;
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    font-weight: 500;
+    color: var(--accent-2);
+    margin-left: 1rem;
+}
+#chatbot .chatbot-container .msg-box-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+}
+#chatbot .chatbot-container .msg-box-container .chat-suggestions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+#chatbot .chatbot-container .msg-box-container .chat-suggestions .suggestion-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: var(--accent-1);
+    border: 2px solid #ECECEC;
+    width: 18vmax;
+    font-size: 1vmax;
+    border-radius: 1vmax;
+    padding: 1vmax;
+    height: 7vmax;
+}
+#chatbot .chatbot-container .msg-box-container .chat-suggestions .suggestion-box .suggestion-content {
+    font-weight: 700;
+    color: #574D52;
+}
+#chatbot .chatbot-container .msg-box-container .chat-suggestions .suggestion-box .suggestion-label {
+    color: #7E7E7E;
+}
+#chatbot .chatbot-container .msg-box-container .msg-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    background-color: var(--accent-1);
+    border: 2px solid #ECECEC;
+    padding: 8px;
+    border-radius: 50px;
+    font-size: 1vmax;
+}
+#chatbot .chatbot-container .msg-box-container .msg-bar .msg-box {
+    color: #574D52;
+    margin-left: 1rem;
+}
+#chatbot .chatbot-container .msg-box-container .msg-bar .send-btn {
+    background: var(--accent-2);
+    color: var(--accent-1);
+    padding: .5rem 1rem;
+    border-radius: 50px;
+}
+
+
+#roadmap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+#roadmap .roadmap-container {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#roadmap .roadmap-container img {
+    width: 100%;
+    object-fit: contain;
+}
+
+#footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    background: var(--bg-clr-2);
+    margin-top: 2rem;
+}
+
+#footer .footer-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 10px;
+    z-index: 3;
+}
+#footer .footer-bar .logo {
+    width: 16vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+#footer .footer-bar .logo img {
+    width: 100%;
+    object-fit: contain;
+    filter: invert(1);
+}
+
+#footer .footer-bar .buy-btn {
+    color: var(--accent-2);
+    border-radius: 50px;
+    background: var(--accent-1);
+    padding: .5rem 2rem;
+    font-family: Satoshi;
+    font-weight: 700;
+    align-self: stretch;
+    font-size: 1.5vmax;
+    border: none;
+}
+#footer .footer-bar .tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+#footer .footer-bar .tabs .nav-link {
+    font-size: 1.5vmax;
+    font-family: Satoshi;
+    font-weight: 700;
+    color: var(--accent-1);
+}
+
+#footer .footer-details {
+    font-family: Satoshi;
+    color: var(--accent-1);
+}
