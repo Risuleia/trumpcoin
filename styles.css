@@ -260,6 +260,7 @@ a {
     padding: .8rem 1.5rem;
     border-radius: 50px;
     font-size: 1.2vmax;
+    border: none !important;
 }
 
 .section-heading {
