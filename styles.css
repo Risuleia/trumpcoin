@@ -182,6 +182,7 @@ a {
     align-items: center;
     gap: 1rem;
     margin-top: -8vmax;
+    z-index: 3;
 }
 #primary .button-bar .buy-btn {
     font-size: 3vmax;
@@ -192,6 +193,9 @@ a {
     color: var(--accent-2);
     border: 2px solid var(--accent-1);
     padding: .7rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #primary .button-bar .join-btn {
     font-size: 3vmax;
@@ -202,6 +206,9 @@ a {
     color: var(--accent-1);
     border: 2px solid var(--accent-1);
     padding: .7rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #primary #wallet {
